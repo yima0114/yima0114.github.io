@@ -1,0 +1,390 @@
+/*
+  Yi Ma portfolio website
+  EDIT COLORS, TYPE SIZES, AND SPACING below to adjust the visual design.
+*/
+
+:root {
+  --background: #ffffff;
+  --text: #161616;
+  --muted: #6e6e6e;
+  --line: #d9d9d9;
+  --soft: #f5f5f2;
+  --page-width: 1500px;
+  --side-space: clamp(1.25rem, 4vw, 4.5rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+a:hover {
+  color: var(--muted);
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10;
+  padding: 0.55rem 0.8rem;
+  background: var(--text);
+  color: var(--background);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(100%, var(--page-width));
+  margin-inline: auto;
+  padding-inline: var(--side-space);
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name {
+  flex: 0 0 auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.55rem 1.4rem;
+  font-size: 0.88rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+main {
+  min-height: 68vh;
+  padding-top: clamp(3rem, 7vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(3.5rem, 9vw, 8.5rem);
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: -0.025em;
+}
+
+.eyebrow,
+.section-number {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: clamp(3rem, 8vw, 9rem);
+}
+
+.home-copy {
+  position: sticky;
+  top: 2rem;
+}
+
+.identity-line {
+  max-width: 34rem;
+  margin-bottom: 2rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  line-height: 1.35;
+}
+
+.intro-text {
+  max-width: 34rem;
+  color: #353535;
+}
+
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.home-image {
+  margin: 0;
+}
+
+.home-image img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  object-position: center top;
+  background: var(--soft);
+}
+
+figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.page-intro {
+  max-width: 62rem;
+  margin-bottom: clamp(5rem, 11vw, 10rem);
+}
+
+.page-intro > p:last-child {
+  max-width: 46rem;
+  color: #353535;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+}
+
+.work-section + .work-section {
+  margin-top: clamp(8rem, 16vw, 15rem);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(3rem, 0.25fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: clamp(2.5rem, 5vw, 5rem);
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--text);
+}
+
+.section-heading h2 {
+  max-width: 54rem;
+  margin-bottom: 0;
+}
+
+.gallery {
+  columns: 3 300px;
+  column-gap: clamp(1.2rem, 2.5vw, 2.5rem);
+}
+
+.gallery figure {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 clamp(2.5rem, 5vw, 5rem);
+  break-inside: avoid;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  background: var(--soft);
+}
+
+.text-page {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.archive-note {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  gap: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--text);
+}
+
+.archive-note h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+}
+
+.archive-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.archive-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.status-note {
+  margin-top: 5rem;
+  color: var(--muted);
+}
+
+.cv-sections section {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.5fr) minmax(0, 1fr);
+  gap: 2rem;
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid var(--text);
+}
+
+.cv-sections h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2.35rem);
+}
+
+.cv-sections p {
+  margin-bottom: 0.45rem;
+}
+
+.placeholder-text {
+  color: var(--muted);
+}
+
+.contact-page {
+  min-height: 72vh;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  font-style: normal;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 1.6rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    display: block;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+    margin-top: 1.2rem;
+  }
+
+  .home-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .home-copy {
+    position: static;
+  }
+
+  .home-image {
+    margin-top: 1rem;
+  }
+
+  .archive-note,
+  .cv-sections section {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-nav {
+    gap: 0.45rem 1rem;
+  }
+
+  main {
+    padding-top: 3.5rem;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .section-number {
+    margin-bottom: 0;
+  }
+
+  .site-footer {
+    display: block;
+  }
+
+  .site-footer a {
+    display: inline-block;
+    margin-top: 0.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
