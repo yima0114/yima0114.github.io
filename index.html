@@ -3,55 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yi Ma is an artist-researcher working across painting, material translation, wearable forms, and public recognition.">
+  <meta name="description" content="Yi Ma is an artist-researcher working across realist oil painting, jewelry, wearable objects, material translation, and public infrastructure.">
   <title>Yi Ma</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-entrance-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header">
-    <a class="site-name" href="index.html">Yi Ma</a>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="works.html">Works</a>
-      <a href="research.html">Research / Archive</a>
-      <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <main class="home-entrance" id="main-content" data-home-entrance data-default-title="Hello, I am Yi Ma!">
+    <div class="home-entrance__stage">
+      <section class="home-preview" id="about-me" aria-live="polite">
+        <p class="home-preview__number" data-home-preview-number></p>
+        <h1 class="home-preview__title" data-home-preview-title>Hello, I am Yi Ma!</h1>
+        <p class="home-preview__body" data-home-preview-body></p>
+      </section>
 
-  <main id="main-content">
-    <section class="home-intro">
-      <div class="home-copy">
-        <p class="eyebrow">Artist and researcher</p>
-        <h1>Yi Ma</h1>
-
-        <!-- EDIT THIS LINE to update the short description of your practice. -->
-        <p class="identity-line">Artist-researcher working across painting, material translation, wearable forms, and public recognition.</p>
-
-        <!-- EDIT THIS PARAGRAPH to add a fuller introduction to your practice. -->
-        <p class="intro-text">My practice follows how forms and materials move between civic infrastructure, painted images, wearable objects, and collective memory. Through making and research, I consider how familiar public structures become visible, interpreted, and personally held.</p>
-
-        <div class="home-links" aria-label="Explore the website">
-          <a href="works.html">Works</a>
-          <a href="research.html">Research / Archive</a>
-          <a href="cv.html">CV</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-
-      <figure class="home-image">
-        <img src="web-images/oil-painting-01.jpg" alt="Artwork by Yi Ma">
-        <!-- EDIT THIS CAPTION when the exact artwork information is available. -->
-        <figcaption>Title, medium, dimensions, year.</figcaption>
+      <figure class="home-portrait" aria-label="Portrait of Yi Ma">
+        <img src="web-images/home/yi-ma-welcome.jpg" alt="Black-and-white portrait of Yi Ma">
       </figure>
-    </section>
+
+      <nav class="home-index" aria-label="Homepage index">
+        <a class="home-index__item" href="#about-me" data-preview-number="00" data-preview-title="About Me" data-preview-body="Yi Ma is an artist-researcher working across realist oil painting, jewelry, wearable objects, and material translation. Her practice observes overlooked urban forms through texture, scale, surface, and material transformation.">
+          <span class="home-index__number">00</span>
+          <span class="home-index__label">About Me</span>
+        </a>
+        <a class="home-index__item" href="pipe-lady.html" data-preview-number="01" data-preview-title="Pipe Lady" data-preview-body="A painting-led artistic research project on pipe-based public infrastructure, visual attention, misrecognition, and exhibition as inquiry. The project moves between painting, printmaking, wearable translation, and public-facing documentation.">
+          <span class="home-index__number">01</span>
+          <span class="home-index__label">Pipe Lady</span>
+        </a>
+        <a class="home-index__item" href="jem.html" data-preview-number="02" data-preview-title="Jewelry" data-preview-body="Jewelry, metal design, and material objects exploring force, body, scale, surface, texture, and material translation. This section includes the Nipple Brooch Series, jewelry and metal design, and material/object studies.">
+          <span class="home-index__number">02</span>
+          <span class="home-index__label">Jewelry</span>
+        </a>
+        <a class="home-index__item" href="cv.html" data-preview-number="03" data-preview-title="CV" data-preview-body="Education, exhibitions, selected outputs, research formation, and professional experience across literature, oil painting, jewelry design, and artistic research.">
+          <span class="home-index__number">03</span>
+          <span class="home-index__label">CV</span>
+        </a>
+      </nav>
+
+      <section class="home-mobile-previews" aria-label="Section previews">
+        <article>
+          <h2>About Me</h2>
+          <p>Yi Ma is an artist-researcher working across realist oil painting, jewelry, wearable objects, and material translation. Her practice observes overlooked urban forms through texture, scale, surface, and material transformation.</p>
+        </article>
+        <article>
+          <h2>Pipe Lady</h2>
+          <p>A painting-led artistic research project on pipe-based public infrastructure, visual attention, misrecognition, and exhibition as inquiry. The project moves between painting, printmaking, wearable translation, and public-facing documentation.</p>
+        </article>
+        <article>
+          <h2>Jewelry</h2>
+          <p>Jewelry, metal design, and material objects exploring force, body, scale, surface, texture, and material translation. This section includes the Nipple Brooch Series, jewelry and metal design, and material/object studies.</p>
+        </article>
+        <article>
+          <h2>CV</h2>
+          <p>Education, exhibitions, selected outputs, research formation, and professional experience across literature, oil painting, jewelry design, and artistic research.</p>
+        </article>
+      </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; Yi Ma</p>
-    <a href="mailto:yima0114@gmail.com">yima0114@gmail.com</a>
-  </footer>
+  <script>
+    (() => {
+      const home = document.querySelector("[data-home-entrance]");
+
+      if (!home) {
+        return;
+      }
+
+      const title = home.querySelector("[data-home-preview-title]");
+      const body = home.querySelector("[data-home-preview-body]");
+      const number = home.querySelector("[data-home-preview-number]");
+      const items = home.querySelectorAll("[data-preview-title]");
+      const defaultTitle = home.dataset.defaultTitle || "Hello, I am Yi Ma!";
+
+      const setPreview = (item) => {
+        if (!item) {
+          title.textContent = defaultTitle;
+          body.textContent = "";
+          number.textContent = "";
+          home.classList.remove("is-previewing");
+          return;
+        }
+
+        title.textContent = item.dataset.previewTitle || defaultTitle;
+        body.textContent = item.dataset.previewBody || "";
+        number.textContent = item.dataset.previewNumber || "";
+        home.classList.add("is-previewing");
+      };
+
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => setPreview(item));
+        item.addEventListener("focus", () => setPreview(item));
+        item.addEventListener("mouseleave", () => {
+          if (!item.matches(":focus")) {
+            setPreview(null);
+          }
+        });
+        item.addEventListener("blur", () => setPreview(null));
+      });
+    })();
+  </script>
 </body>
 </html>

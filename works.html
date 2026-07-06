@@ -3,165 +3,1245 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected works by artist-researcher Yi Ma.">
-  <title>Works | Yi Ma</title>
+  <meta name="description" content="Pipe Lady, a series across oil painting, screenprinting, pipe epaulettes, and pipe forms by Yi Ma.">
+  <title>Pipe Lady | Yi Ma</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pipe-lady-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
     <a class="site-name" href="index.html">Yi Ma</a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
-      <a href="works.html" aria-current="page">Works</a>
-      <a href="research.html">Research / Archive</a>
+      <a href="pipe-lady.html">Pipe Lady</a>
+      <a href="jem.html">Jewelry</a>
       <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main id="main-content">
-    <header class="page-intro">
-      <p class="eyebrow">Selected works</p>
-      <h1>Works</h1>
-      <!-- EDIT THIS TEXT to introduce the selection of works. -->
-      <p>Painting, wearable forms, metal translation, and color studies.</p>
+    <header class="page-intro pipe-lady-intro">
+      <p class="eyebrow">Series</p>
+      <h1>Pipe Lady</h1>
+      <!-- EDIT THIS TEXT to introduce the Pipe Lady series. -->
+      <p class="pipe-lady-summary">From oil painting to image translation and pipe-derived forms.</p>
+
+      <nav class="focus-nav" aria-label="Pipe Lady sections">
+        <a class="focus-nav__item focus-nav__item--oil" href="#oil-painting-gallery-view" data-oil-gallery-trigger>
+          <img class="focus-nav__image" src="web-images/oil-painting-cropped/caesar.jpg" alt="" loading="lazy">
+          <span class="focus-nav__text">
+            <span class="focus-nav__number">01</span>
+            <span class="focus-nav__title">Oil Painting</span>
+          </span>
+        </a>
+        <a class="focus-nav__item focus-nav__item--screen" href="#printmaking-gallery-view" data-printmaking-gallery-trigger>
+          <img class="focus-nav__image" src="web-images/printmaking/divine-comedy.JPG" alt="" loading="lazy">
+          <span class="focus-nav__text">
+            <span class="focus-nav__number">02</span>
+            <span class="focus-nav__title">Printmaking</span>
+          </span>
+        </a>
+        <a class="focus-nav__item focus-nav__item--pipe" href="#pipe-wearable-gallery-view" data-pipe-gallery-trigger>
+          <img class="focus-nav__image" src="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-01.jpg" alt="" loading="lazy">
+          <span class="focus-nav__text">
+            <span class="focus-nav__number">03</span>
+            <span class="focus-nav__title">Pipe Wearable Piece</span>
+          </span>
+        </a>
+      </nav>
     </header>
 
-    <section class="work-section" aria-labelledby="pipe-lady-heading">
-      <div class="section-heading">
-        <p class="section-number">01</p>
-        <h2 id="pipe-lady-heading">Pipe Lady / Fire Hydrant Paintings</h2>
+    <section class="pipe-lady-oil-view" id="oil-painting-gallery-view" aria-labelledby="oil-painting-gallery-title" hidden>
+      <button class="pipe-lady-series-back" type="button" data-series-back>Back to Pipe Lady</button>
+      <div class="section-heading pipe-lady-oil-view__heading">
+        <h2 id="oil-painting-gallery-title">Oil Painting</h2>
       </div>
 
-      <!-- EDIT CAPTIONS inside each figcaption. Add or remove figure blocks to change the gallery. -->
-      <div class="gallery">
-        <figure>
-          <img src="web-images/oil-painting-01.jpg" alt="Pipe Lady or fire hydrant painting, view 1">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+      <div class="pipe-lady-oil-gallery" data-oil-gallery></div>
+
+      <article class="pipe-lady-oil-detail" data-oil-detail hidden>
+        <div class="pipe-lady-oil-detail__info">
+          <button class="pipe-lady-oil-back" type="button" data-oil-back>Back to Oil Painting</button>
+          <div class="pipe-lady-oil-detail__caption" data-oil-detail-caption></div>
+          <div class="pipe-lady-oil-work-nav" aria-label="Adjacent oil paintings">
+            <button class="pipe-lady-oil-neighbor pipe-lady-oil-last" type="button" data-oil-last>
+              <span>Last:</span>
+              <strong data-oil-last-title></strong>
+            </button>
+            <button class="pipe-lady-oil-neighbor pipe-lady-oil-next" type="button" data-oil-next>
+              <span>Next:</span>
+              <strong data-oil-next-title></strong>
+            </button>
+          </div>
+        </div>
+        <figure class="pipe-lady-oil-detail__image-area">
+          <img class="pipe-lady-oil-detail__image" alt="" data-oil-detail-image>
         </figure>
-        <figure>
-          <img src="web-images/oil-painting-02.jpg" alt="Pipe Lady or fire hydrant painting, view 2" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+      </article>
+    </section>
+
+    <section class="pipe-lady-printmaking-view" id="printmaking-gallery-view" aria-labelledby="printmaking-gallery-title" hidden>
+      <button class="pipe-lady-printmaking-series-back" type="button" data-printmaking-series-back>Back to Pipe Lady</button>
+      <div class="section-heading pipe-lady-printmaking-view__heading">
+        <h2 id="printmaking-gallery-title">Printmaking</h2>
+      </div>
+
+      <div class="pipe-lady-printmaking-gallery" data-printmaking-gallery></div>
+
+      <article class="pipe-lady-printmaking-detail" data-printmaking-detail hidden>
+        <div class="pipe-lady-printmaking-detail__info">
+          <button class="pipe-lady-printmaking-back" type="button" data-printmaking-back>Back to Printmaking</button>
+          <div class="pipe-lady-printmaking-detail__caption" data-printmaking-detail-caption></div>
+        </div>
+        <figure class="pipe-lady-printmaking-detail__image-area">
+          <img class="pipe-lady-printmaking-detail__image" alt="" data-printmaking-detail-image>
         </figure>
-        <figure>
-          <img src="web-images/oil-painting-03.jpg" alt="Pipe Lady or fire hydrant painting, view 3" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+      </article>
+    </section>
+
+    <section class="pipe-lady-pipe-view" id="pipe-wearable-gallery-view" aria-labelledby="pipe-wearable-gallery-title" hidden>
+      <button class="pipe-lady-pipe-series-back" type="button" data-pipe-series-back>Back to Pipe Lady</button>
+      <div class="section-heading pipe-lady-pipe-view__heading">
+        <h2 id="pipe-wearable-gallery-title">Pipe Wearable Piece</h2>
+      </div>
+
+      <div class="pipe-lady-pipe-gallery" data-pipe-gallery></div>
+
+      <article class="pipe-lady-pipe-detail" data-pipe-detail hidden>
+        <figure class="pipe-lady-pipe-detail__image-area">
+          <img class="pipe-lady-pipe-detail__image" alt="" data-pipe-detail-image>
         </figure>
-        <figure>
-          <img src="web-images/oil-painting-04.jpg" alt="Pipe Lady or fire hydrant painting, view 4" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+        <div class="pipe-lady-pipe-detail__info">
+          <button class="pipe-lady-pipe-back" type="button" data-pipe-back>Back to Pipe Wearable Piece</button>
+          <div class="pipe-lady-pipe-detail__caption" data-pipe-detail-caption></div>
+        </div>
+        <div class="pipe-lady-pipe-detail__thumbs" data-pipe-detail-thumbs hidden></div>
+      </article>
+    </section>
+
+    <div class="pipe-lady-data-source" hidden aria-hidden="true">
+    <section class="work-section" aria-labelledby="oil-painting-heading">
+      <div class="section-heading">
+        <h2 id="oil-painting-heading">Fine Art — Oil Painting</h2>
+      </div>
+
+      <div class="gallery oil-painting-grid">
+        <figure class="work-card oil-painting-card" data-images="web-images/oil-painting-cropped/caesar.jpg">
+          <img src="web-images/oil-painting-cropped/caesar.jpg" alt="Caesar by Yi Ma">
+          <figcaption>
+            <h3>Caesar</h3>
+            <p class="work-meta">Oil on canvas, 24 x 24 in, 2021.</p>
+          </figcaption>
         </figure>
-        <figure>
-          <img src="web-images/oil-painting-05.jpg" alt="Pipe Lady or fire hydrant painting, view 5" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+        <figure class="work-card oil-painting-card" data-images="web-images/oil-painting-cropped/absolut-vodka.jpg">
+          <img src="web-images/oil-painting-cropped/absolut-vodka.jpg" alt="Absolut Vodka by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Absolut Vodka</h3>
+            <p class="work-meta">Oil on canvas, 24 x 24 in, 2021.</p>
+          </figcaption>
         </figure>
-        <figure>
-          <img src="web-images/oil-painting-06.jpg" alt="Pipe Lady or fire hydrant painting, view 6" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+        <figure class="work-card oil-painting-card" data-images="web-images/oil-painting-cropped/midori-sour.jpg">
+          <img src="web-images/oil-painting-cropped/midori-sour.jpg" alt="Midori Sour by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Midori Sour</h3>
+            <p class="work-meta">Oil on canvas, 30 x 24 in, 2021.</p>
+          </figcaption>
         </figure>
-        <figure>
-          <img src="web-images/oil-painting-07.jpg" alt="Pipe Lady or fire hydrant painting, view 7" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+        <figure class="work-card oil-painting-card" data-images="web-images/oil-painting-confirmed/ulysses.jpg">
+          <img src="web-images/oil-painting-confirmed/ulysses.jpg" alt="Ulysses by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Ulysses</h3>
+            <p class="work-meta">Oil on canvas, 30 x 20 in, 2021.</p>
+          </figcaption>
         </figure>
-        <figure>
-          <img src="web-images/oil-painting-08.jpg" alt="Pipe Lady or fire hydrant painting, view 8" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+        <figure class="work-card oil-painting-card work-card--tall-painting" data-images="web-images/oil-painting-cropped/new-chain.jpg">
+          <img src="web-images/oil-painting-cropped/new-chain.jpg" alt="New Chain by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>New Chain</h3>
+            <p class="work-meta">Oil on canvas, 36 x 18 in, 2022.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card oil-painting-card work-card--small-painting" data-images="web-images/oil-painting-cropped/cavalry-choir.jpg">
+          <img src="web-images/oil-painting-cropped/cavalry-choir.jpg" alt="Cavalry Choir by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Cavalry Choir</h3>
+            <p class="work-meta">Oil on Baltic birch, 6 x 12 in, 2022.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card oil-painting-card" data-images="web-images/oil-painting-cropped/twelve-mile-limit.jpg">
+          <img src="web-images/oil-painting-cropped/twelve-mile-limit.jpg" alt="Twelve Mile Limit by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Twelve Mile Limit</h3>
+            <p class="work-meta">Oil on canvas, 18 x 24 in.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card oil-painting-card work-card--small-painting work-card--small-square-painting" data-images="web-images/oil-painting-cropped/broadway-cast.jpg">
+          <img src="web-images/oil-painting-cropped/broadway-cast.jpg" alt="Broadway Cast by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Broadway Cast</h3>
+            <p class="work-meta">Oil on canvas, 6 x 6 in, 2024.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card oil-painting-card work-card--small-painting work-card--small-square-painting" data-images="web-images/oil-painting-cropped/bloody-mary.jpg">
+          <img src="web-images/oil-painting-cropped/bloody-mary.jpg" alt="Bloody Mary by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Bloody Mary</h3>
+            <p class="work-meta">Oil on canvas, 6 x 6 in.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card oil-painting-card" data-images="web-images/oil-painting-cropped/no-longer-human.jpg">
+          <img src="web-images/oil-painting-cropped/no-longer-human.jpg" alt="No Longer Human by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>No Longer Human</h3>
+            <p class="work-meta">Oil on wood canvas, 16 x 20 in, 2025.</p>
+          </figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="work-section" aria-labelledby="metal-heading">
+    <section class="work-section" aria-labelledby="printmaking-heading">
       <div class="section-heading">
-        <p class="section-number">02</p>
-        <h2 id="metal-heading">Wearable and Metal Translation</h2>
+        <h2 id="printmaking-heading">Printmaking</h2>
       </div>
 
-      <!-- EDIT CAPTIONS inside each figcaption. Image paths point to web-images. -->
-      <div class="gallery">
-        <figure>
-          <img src="web-images/metalwork-01.jpg" alt="Wearable or metal translation work, view 1" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+      <div class="gallery printmaking-grid">
+        <figure class="work-card printmaking-card" data-images="web-images/printmaking/divine-comedy.JPG">
+          <img src="web-images/printmaking/divine-comedy.JPG" alt="Divine Comedy by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Divine Comedy</h3>
+            <p class="work-meta">Screen printing on paper, 22 × 15 in</p>
+          </figcaption>
         </figure>
-        <figure>
-          <img src="web-images/metalwork-02.jpg" alt="Wearable or metal translation work, view 2" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/metalwork-03.jpg" alt="Wearable or metal translation work, view 3" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/metalwork-04.jpg" alt="Wearable or metal translation work, view 4" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/metalwork-05.jpg" alt="Wearable or metal translation work, view 5" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/metalwork-06.jpg" alt="Wearable or metal translation work, view 6" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/metalwork-07.jpg" alt="Wearable or metal translation work, view 7" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/metalwork-08.jpg" alt="Wearable or metal translation work, view 8" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+        <figure class="work-card printmaking-card" data-images="web-images/printmaking/new-york-times.jpg">
+          <img src="web-images/printmaking/new-york-times.jpg" alt="New York Times by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>New York Times</h3>
+            <p class="work-meta">Screen printing on paper, 22 × 30 in</p>
+          </figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="work-section" aria-labelledby="color-heading">
+    <section class="work-section" aria-labelledby="jem-pipe-heading">
       <div class="section-heading">
-        <p class="section-number">03</p>
-        <h2 id="color-heading">Color and Material Studies</h2>
+        <h2 id="jem-pipe-heading">JEM — Pipe Wearable Translation</h2>
       </div>
 
-      <!-- EDIT CAPTIONS inside each figcaption. Image paths point to web-images. -->
       <div class="gallery">
-        <figure>
-          <img src="web-images/color-work-01.jpg" alt="Color and material study, view 1" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+        <figure class="pipe-standalone-work" data-series="pipe-wearable-translation" data-function="pipe-wearable-translation" data-lightbox-title="Pipe Shoulder Piece" data-start-index="0" data-images="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-01.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-02.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-03.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-04.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-05.jpg">
+          <img class="pipe-standalone-work__image" src="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-01.jpg" alt="Pipe Shoulder Piece by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Pipe Shoulder Piece</h3>
+            <p class="work-meta">Etched copper, brass chain, oxidation, 185 x 145 x 125 mm, 2024.</p>
+          </figcaption>
+          <div class="pipe-detail-strip" aria-label="Additional views of Pipe Shoulder Piece">
+            <button class="pipe-detail-strip__item" type="button" data-lightbox-title="Pipe Shoulder Piece" data-start-index="0" data-images="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-02.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-03.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-04.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-05.jpg" aria-label="Open Pipe Shoulder Piece detail view 2">
+              <img src="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-02.jpg" alt="Pipe Shoulder Piece alternate view 2 by Yi Ma" loading="lazy">
+            </button>
+            <button class="pipe-detail-strip__item" type="button" data-lightbox-title="Pipe Shoulder Piece" data-start-index="1" data-images="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-02.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-03.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-04.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-05.jpg" aria-label="Open Pipe Shoulder Piece detail view 3">
+              <img src="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-03.jpg" alt="Pipe Shoulder Piece alternate view 3 by Yi Ma" loading="lazy">
+            </button>
+            <button class="pipe-detail-strip__item" type="button" data-lightbox-title="Pipe Shoulder Piece" data-start-index="2" data-images="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-02.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-03.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-04.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-05.jpg" aria-label="Open Pipe Shoulder Piece detail view 4">
+              <img src="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-04.jpg" alt="Pipe Shoulder Piece alternate view 4 by Yi Ma" loading="lazy">
+            </button>
+            <button class="pipe-detail-strip__item" type="button" data-lightbox-title="Pipe Shoulder Piece" data-start-index="3" data-images="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-02.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-03.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-04.jpg,web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-05.jpg" aria-label="Open Pipe Shoulder Piece detail view 5">
+              <img src="web-images/jewelry/pipe-wearable-translation/pipe-shoulder-piece/pipe-shoulder-piece-05.jpg" alt="Pipe Shoulder Piece alternate view 5 by Yi Ma" loading="lazy">
+            </button>
+          </div>
         </figure>
-        <figure>
-          <img src="web-images/color-work-02.jpg" alt="Color and material study, view 2" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/color-work-03.jpg" alt="Color and material study, view 3" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/color-work-04.jpg" alt="Color and material study, view 4" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/color-work-05.jpg" alt="Color and material study, view 5" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/color-work-06.jpg" alt="Color and material study, view 6" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/color-work-07.jpg" alt="Color and material study, view 7" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
-        </figure>
-        <figure>
-          <img src="web-images/color-work-08.jpg" alt="Color and material study, view 8" loading="lazy">
-          <figcaption>Title, medium, dimensions, year.</figcaption>
+        <figure class="work-card" data-series="pipe-wearable-translation" data-function="pipe-wearable-translation" data-images="web-images/jewelry/pipe-wearable-translation/untitled-pipe-form/untitled-pipe-form-01.jpg,web-images/jewelry/pipe-wearable-translation/untitled-pipe-form/untitled-pipe-form-02.jpg">
+          <img src="web-images/jewelry/pipe-wearable-translation/untitled-pipe-form/untitled-pipe-form-01.jpg" alt="Untitled Pipe Form by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Untitled (Pipe Form)</h3>
+            <p class="work-meta">Brass, 2024.</p>
+          </figcaption>
         </figure>
       </div>
     </section>
+
+    <section class="work-section" aria-labelledby="jem-nipple-heading">
+      <div class="section-heading">
+        <h2 id="jem-nipple-heading">JEM — Nipple Brooch Series</h2>
+      </div>
+
+      <div class="gallery nipple-series-grid">
+        <figure class="work-card nipple-series-card" data-series="nipple-brooch-series" data-function="nipple-brooch-series" data-images="web-images/jewelry/nipple-brooch-series/around-nipples-we-trust/around-nipples-we-trust-01.jpg,web-images/jewelry/nipple-brooch-series/around-nipples-we-trust/around-nipples-we-trust-02.jpg,web-images/jewelry/nipple-brooch-series/around-nipples-we-trust/around-nipples-we-trust-03.jpg,web-images/jewelry/nipple-brooch-series/around-nipples-we-trust/around-nipples-we-trust-04.jpg,web-images/jewelry/nipple-brooch-series/around-nipples-we-trust/around-nipples-we-trust-05.jpg">
+          <img src="web-images/jewelry/nipple-brooch-series/around-nipples-we-trust/around-nipples-we-trust-01.jpg" alt="Around Nipples We Trust by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Around Nipples We Trust</h3>
+            <p class="work-meta">Brooch, copper, brass, CZ stone, 65 x 76 x 8 mm.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card nipple-series-card" data-series="nipple-brooch-series" data-function="nipple-brooch-series" data-images="web-images/jewelry/nipple-brooch-series/vagina-monologue/vagina-monologue-01.jpg,web-images/jewelry/nipple-brooch-series/vagina-monologue/vagina-monologue-02.jpg,web-images/jewelry/nipple-brooch-series/vagina-monologue/vagina-monologue-03.jpg,web-images/jewelry/nipple-brooch-series/vagina-monologue/vagina-monologue-04.jpg">
+          <img src="web-images/jewelry/nipple-brooch-series/vagina-monologue/vagina-monologue-01.jpg" alt="Vagina Monologue by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Vagina Monologue</h3>
+            <p class="work-meta">Brooch, bronze, copper, brass, stainless steel, 55 x 66 x 21 mm.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card nipple-series-card" data-series="nipple-brooch-series" data-function="nipple-brooch-series" data-images="web-images/jewelry/nipple-brooch-series/peek-a-boo/peek-a-boo-01.jpg,web-images/jewelry/nipple-brooch-series/peek-a-boo/peek-a-boo-02.jpg">
+          <img src="web-images/jewelry/nipple-brooch-series/peek-a-boo/peek-a-boo-01.jpg" alt="Peek A Boo by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Peek A Boo</h3>
+            <p class="work-meta">Brooch, copper, nickel wire, stainless steel, 51 x 51 x 22 mm.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card nipple-series-card" data-series="nipple-brooch-series" data-function="nipple-brooch-series" data-images="web-images/jewelry/nipple-brooch-series/nipple-brooch/nipple-brooch-01.jpg,web-images/jewelry/nipple-brooch-series/nipple-brooch/nipple-brooch-02.jpg">
+          <img src="web-images/jewelry/nipple-brooch-series/nipple-brooch/nipple-brooch-01.jpg" alt="Nipple Brooch by Yi Ma" loading="lazy">
+          <figcaption>
+            <h3>Nipple Brooch</h3>
+            <p class="work-meta">Copper, brass, stainless steel, 80 x 80 x 38 mm, 2024.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="work-section" aria-labelledby="jem-jewelry-heading">
+      <div class="section-heading">
+        <h2 id="jem-jewelry-heading">JEM — Jewelry Design</h2>
+        <div class="jewelry-function-filter" role="group" aria-label="Filter Jewelry Design works">
+          <button class="is-active" type="button" data-jewelry-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-jewelry-filter="ring" aria-pressed="false">Ring</button>
+          <button type="button" data-jewelry-filter="earring" aria-pressed="false">Earrings</button>
+          <button type="button" data-jewelry-filter="brooch" aria-pressed="false">Brooch</button>
+          <button type="button" data-jewelry-filter="handcuff" aria-pressed="false">Cuff / Hand Piece</button>
+          <button type="button" data-jewelry-filter="sculpture" aria-pressed="false">Sculpture</button>
+        </div>
+      </div>
+
+      <div class="jewelry-design-groups">
+        <section class="jewelry-design-group" data-jewelry-group="ring">
+          <h3 class="jewelry-design-group-title">Ring</h3>
+          <div class="gallery jewelry-design-grid jewelry-object-index jewelry-design-group-grid">
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="ring" data-images="web-images/jewelry/jewelry-design/ring/another-brick-in-the-wall/another-brick-in-the-wall-01.jpg">
+              <img src="web-images/jewelry/jewelry-design/ring/another-brick-in-the-wall/another-brick-in-the-wall-01.jpg" alt="Another Brick in the Wall by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Another Brick in the Wall</h3>
+                <p class="work-meta">Silver, quartz, 27 x 29 x 8 mm.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="ring" data-images="web-images/jewelry/jewelry-design/ring/collar-ring-set/collar-ring-set-01.jpg,web-images/jewelry/jewelry-design/ring/collar-ring-set/collar-ring-set-02.jpg,web-images/jewelry/jewelry-design/ring/collar-ring-set/collar-ring-set-03.png,web-images/jewelry/jewelry-design/ring/collar-ring-set/collar-ring-set-04.jpg">
+              <img src="web-images/jewelry/jewelry-design/ring/collar-ring-set/collar-ring-set-01.jpg" alt="Collar Ring Set by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Collar Ring Set</h3>
+                <p class="work-meta">Ring set, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="ring" data-images="web-images/jewelry/jewelry-design/ring/crazy-frog/crazy-frog-01.jpg">
+              <img src="web-images/jewelry/jewelry-design/ring/crazy-frog/crazy-frog-01.jpg" alt="Crazy Frog by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Crazy Frog</h3>
+                <p class="work-meta">Ring, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="ring" data-images="web-images/jewelry/jewelry-design/ring/citta-vuota/citta-vuota-01.jpg">
+              <img src="web-images/jewelry/jewelry-design/ring/citta-vuota/citta-vuota-01.jpg" alt="Città Vuota by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Città Vuota</h3>
+                <p class="work-meta">Ring, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="ring" data-images="web-images/jewelry/jewelry-design/ring/erosion/erosion-01.jpg">
+              <img src="web-images/jewelry/jewelry-design/ring/erosion/erosion-01.jpg" alt="Erosion by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Erosion</h3>
+                <p class="work-meta">Ring, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="jewelry-design-group" data-jewelry-group="earring">
+          <h3 class="jewelry-design-group-title">Earrings</h3>
+          <div class="gallery jewelry-design-grid jewelry-object-index jewelry-design-group-grid">
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="earring" data-images="web-images/jewelry/jewelry-design/ring/twisted-nerve/twisted-nerve-01.jpg,web-images/jewelry/jewelry-design/ring/twisted-nerve/twisted-nerve-02.jpg">
+              <img src="web-images/jewelry/jewelry-design/ring/twisted-nerve/twisted-nerve-01.jpg" alt="Twisted Nerve by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Twisted Nerve</h3>
+                <p class="work-meta">Earrings, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="earring" data-images="web-images/jewelry/jewelry-design/earring/liberty/liberty-01.jpg,web-images/jewelry/jewelry-design/earring/liberty/liberty-02.jpg,web-images/jewelry/jewelry-design/earring/liberty/liberty-03.jpg">
+              <img src="web-images/jewelry/jewelry-design/earring/liberty/liberty-01.jpg" alt="Liberty by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Liberty</h3>
+                <p class="work-meta">Earrings, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="jewelry-design-group" data-jewelry-group="brooch">
+          <h3 class="jewelry-design-group-title">Brooch</h3>
+          <div class="gallery jewelry-design-grid jewelry-object-index jewelry-design-group-grid">
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="brooch" data-images="web-images/jewelry/jewelry-design/brooch/liberty-brooch/liberty-brooch-01.jpg,web-images/jewelry/jewelry-design/brooch/liberty-brooch/liberty-brooch-02.jpg">
+              <img src="web-images/jewelry/jewelry-design/brooch/liberty-brooch/liberty-brooch-01.jpg" alt="Liberty Brooch by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Liberty Brooch</h3>
+                <p class="work-meta">Brooch, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="brooch" data-images="web-images/jewelry/jewelry-design/brooch/saint-toilet/saint-toilet-01.jpg,web-images/jewelry/jewelry-design/brooch/saint-toilet/saint-toilet-02.jpg">
+              <img src="web-images/jewelry/jewelry-design/brooch/saint-toilet/saint-toilet-01.jpg" alt="Saint Toilet by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Saint Toilet</h3>
+                <p class="work-meta">Brooch, bronze, copper, wire, toilet 16 x 10 x 6 mm; whole piece 60 x 60 mm.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="jewelry-design-group" data-jewelry-group="handcuff">
+          <h3 class="jewelry-design-group-title">Cuff / Hand Piece</h3>
+          <div class="gallery jewelry-design-grid jewelry-object-index jewelry-design-group-grid">
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="handcuff" data-images="web-images/jewelry/jewelry-design/handcuff/genius-loci/genius-loci-00-cover.jpg,web-images/jewelry/jewelry-design/handcuff/genius-loci/genius-loci-support-01.png,web-images/jewelry/jewelry-design/handcuff/genius-loci/genius-loci-support-02.png">
+              <img src="web-images/jewelry/jewelry-design/handcuff/genius-loci/genius-loci-00-cover.jpg" alt="Genius Loci by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Genius Loci</h3>
+                <p class="work-meta">Cuff / hand piece, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="handcuff" data-images="web-images/jewelry/jewelry-design/handcuff/metallic-sleeve/metallic-sleeve-01.jpg,web-images/jewelry/jewelry-design/handcuff/metallic-sleeve/metallic-sleeve-02.jpg,web-images/jewelry/jewelry-design/handcuff/metallic-sleeve/metallic-sleeve-03.jpg">
+              <img src="web-images/jewelry/jewelry-design/handcuff/metallic-sleeve/metallic-sleeve-01.jpg" alt="Metallic Sleeve by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Metallic Sleeve</h3>
+                <p class="work-meta">Wearable sculpture, copper, bronze, silver, 150 x 75 x 58 mm.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="jewelry-design-group" data-jewelry-group="sculpture">
+          <h3 class="jewelry-design-group-title">Sculpture</h3>
+          <div class="gallery jewelry-design-grid jewelry-object-index jewelry-design-group-grid">
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="sculpture" data-images="web-images/jewelry/jewelry-design/sculpture/le-croissant/le-croissant-01.jpg,web-images/jewelry/jewelry-design/sculpture/le-croissant/le-croissant-02.jpg">
+              <img src="web-images/jewelry/jewelry-design/sculpture/le-croissant/le-croissant-01.jpg" alt="Le Croissant by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Le Croissant</h3>
+                <p class="work-meta">Sculpture, copper, approx. 50 x 102 x 64 mm.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card jewelry-design-card jewelry-object-card" data-series="jewelry-design" data-function="sculpture" data-images="web-images/jewelry/jewelry-design/sculpture/metallic-burger/metallic-burger-01.jpg,web-images/jewelry/jewelry-design/sculpture/metallic-burger/metallic-burger-02.jpg">
+              <img src="web-images/jewelry/jewelry-design/sculpture/metallic-burger/metallic-burger-01.jpg" alt="Metallic Burger by Yi Ma" loading="lazy">
+              <figcaption>
+                <h3>Metallic Burger</h3>
+                <p class="work-meta">Object / sculpture, materials and dimensions to be confirmed.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="work-section" aria-labelledby="jem-material-heading">
+      <div class="section-heading">
+        <h2 id="jem-material-heading">JEM — Material</h2>
+      </div>
+
+      <div class="material-archive">
+        <section class="material-category" aria-labelledby="material-acrylic-heading">
+          <h3 id="material-acrylic-heading">Acrylic</h3>
+
+          <div class="material-group">
+            <h4>Brooch</h4>
+            <div class="gallery material-grid">
+              <figure class="work-card material-card" data-series="material" data-material="acrylic" data-function="brooch" data-images="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-01.jpg">
+                <img src="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-01.jpg" alt="Acrylic Brooch 01 by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Acrylic Brooch 01</h3>
+                  <p class="work-meta">Acrylic brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="acrylic" data-function="brooch" data-images="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-02.jpg">
+                <img src="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-02.jpg" alt="Acrylic Brooch 02 by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Acrylic Brooch 02</h3>
+                  <p class="work-meta">Acrylic brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="acrylic" data-function="brooch" data-images="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-03.jpg">
+                <img src="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-03.jpg" alt="Acrylic Brooch 03 by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Acrylic Brooch 03</h3>
+                  <p class="work-meta">Acrylic brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="acrylic" data-function="brooch" data-images="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-04.jpg">
+                <img src="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-04.jpg" alt="Acrylic Brooch 04 by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Acrylic Brooch 04</h3>
+                  <p class="work-meta">Acrylic brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="acrylic" data-function="brooch" data-images="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-05.jpg">
+                <img src="web-images/jewelry/material/acrylic/acrylic-brooch/acrylic-brooch-05.jpg" alt="Acrylic Brooch 05 by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Acrylic Brooch 05</h3>
+                  <p class="work-meta">Acrylic brooch.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="material-group">
+            <h4>Earrings</h4>
+            <div class="gallery material-grid">
+              <figure class="work-card material-card material-card--acrylic-earrings" data-series="material" data-material="acrylic" data-function="earrings" data-images="web-images/jewelry/material/acrylic/acrylic-earring/acrylic-earring-01.jpg">
+                <div class="material-card__image-box">
+                  <img src="web-images/jewelry/material/acrylic/acrylic-earring/acrylic-earring-01.jpg" alt="Acrylic Earrings by Yi Ma" loading="lazy">
+                </div>
+                <figcaption>
+                  <h3>Acrylic Earrings</h3>
+                  <p class="work-meta">Acrylic earrings.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="material-group">
+            <h4>Sculpture</h4>
+            <div class="gallery material-grid">
+              <figure class="work-card material-card" data-series="material" data-material="acrylic" data-function="sculpture" data-images="web-images/jewelry/material/acrylic/acrylic-sculpture/acrylic-sculpture-burger-01.jpg,web-images/jewelry/material/acrylic/acrylic-sculpture/acrylic-sculpture-burger-02.jpg">
+                <img src="web-images/jewelry/material/acrylic/acrylic-sculpture/acrylic-sculpture-burger-01.jpg" alt="Acrylic Sculpture by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Acrylic Sculpture</h3>
+                  <p class="work-meta">Acrylic sculpture.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="material-category" aria-labelledby="material-felt-heading">
+          <h3 id="material-felt-heading">Felt</h3>
+
+          <div class="material-group">
+            <h4>Brooch</h4>
+            <div class="gallery material-grid">
+              <figure class="work-card material-card" data-series="material" data-material="felt" data-function="brooch" data-images="web-images/jewelry/material/felt/felt-brooch/cioccolato/cioccolato-01.jpg,web-images/jewelry/material/felt/felt-brooch/cioccolato/cioccolato-02.jpg">
+                <img src="web-images/jewelry/material/felt/felt-brooch/cioccolato/cioccolato-01.jpg" alt="Cioccolato by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Cioccolato</h3>
+                  <p class="work-meta">Felt brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="felt" data-function="brooch" data-images="web-images/jewelry/material/felt/felt-brooch/hairdryer/hairdryer-01.jpg,web-images/jewelry/material/felt/felt-brooch/hairdryer/hairdryer-02.jpg">
+                <img src="web-images/jewelry/material/felt/felt-brooch/hairdryer/hairdryer-01.jpg" alt="Hairdryer by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Hairdryer</h3>
+                  <p class="work-meta">Felt brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="felt" data-function="brooch" data-images="web-images/jewelry/material/felt/felt-brooch/lighter/lighter-01.jpg">
+                <img src="web-images/jewelry/material/felt/felt-brooch/lighter/lighter-01.jpg" alt="Lighter by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Lighter</h3>
+                  <p class="work-meta">Felt brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="felt" data-function="brooch" data-images="web-images/jewelry/material/felt/felt-brooch/luxury-mansion/luxury-mansion-01.jpg">
+                <img src="web-images/jewelry/material/felt/felt-brooch/luxury-mansion/luxury-mansion-01.jpg" alt="Luxury Mansion by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Luxury Mansion</h3>
+                  <p class="work-meta">Felt brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="felt" data-function="brooch" data-images="web-images/jewelry/material/felt/felt-brooch/pizza/pizza-set-01.jpg">
+                <img src="web-images/jewelry/material/felt/felt-brooch/pizza/pizza-set-01.jpg" alt="Pizza by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Pizza</h3>
+                  <p class="work-meta">Felt brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="felt" data-function="brooch" data-images="web-images/jewelry/material/felt/felt-brooch/tv/tv-01.jpg">
+                <img src="web-images/jewelry/material/felt/felt-brooch/tv/tv-01.jpg" alt="TV by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>TV</h3>
+                  <p class="work-meta">Felt brooch.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="material-group">
+            <h4>Earrings</h4>
+            <div class="gallery material-grid">
+              <figure class="work-card material-card" data-series="material" data-material="felt" data-function="earrings" data-images="web-images/jewelry/material/felt/felt-earring/mad-earrings/mad-earrings-01.jpg">
+                <img src="web-images/jewelry/material/felt/felt-earring/mad-earrings/mad-earrings-01.jpg" alt="Mad Earrings by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Mad Earrings</h3>
+                  <p class="work-meta">Felt earrings.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="felt" data-function="earrings" data-images="web-images/jewelry/material/felt/felt-earring/sf-muni/sf-muni-01.jpg">
+                <img src="web-images/jewelry/material/felt/felt-earring/sf-muni/sf-muni-01.jpg" alt="SF Muni by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>SF Muni</h3>
+                  <p class="work-meta">Felt earrings.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="material-category" aria-labelledby="material-foam-heading">
+          <h3 id="material-foam-heading">Foam</h3>
+
+          <div class="material-group">
+            <h4>Brooch</h4>
+            <div class="gallery material-grid">
+              <figure class="work-card material-card" data-series="material" data-material="foam" data-function="brooch" data-images="web-images/jewelry/material/foam/foam-brooch/cheese/9-1.jpg,web-images/jewelry/material/foam/foam-brooch/cheese/9-2.jpg,web-images/jewelry/material/foam/foam-brooch/cheese/9-3.jpg">
+                <img src="web-images/jewelry/material/foam/foam-brooch/cheese/9-1.jpg" alt="Cheese by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Cheese</h3>
+                  <p class="work-meta">Foam brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="foam" data-function="brooch" data-images="web-images/jewelry/material/foam/foam-brooch/cup-cake/11-1.jpg,web-images/jewelry/material/foam/foam-brooch/cup-cake/11-2.jpg,web-images/jewelry/material/foam/foam-brooch/cup-cake/11-3.jpg">
+                <img src="web-images/jewelry/material/foam/foam-brooch/cup-cake/11-1.jpg" alt="Cup Cake by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Cup Cake</h3>
+                  <p class="work-meta">Foam brooch.</p>
+                </figcaption>
+              </figure>
+              <figure class="work-card material-card" data-series="material" data-material="foam" data-function="brooch" data-images="web-images/jewelry/material/foam/foam-brooch/pizza/10-1.jpg,web-images/jewelry/material/foam/foam-brooch/pizza/10-2.jpg,web-images/jewelry/material/foam/foam-brooch/pizza/10-3.jpg,web-images/jewelry/material/foam/foam-brooch/pizza/11-4.jpg,web-images/jewelry/material/foam/foam-brooch/pizza/11-5.jpg,web-images/jewelry/material/foam/foam-brooch/pizza/11-6.jpg">
+                <img src="web-images/jewelry/material/foam/foam-brooch/pizza/10-1.jpg" alt="Pizza by Yi Ma" loading="lazy">
+                <figcaption>
+                  <h3>Pizza</h3>
+                  <p class="work-meta">Foam brooch.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="work-section" aria-labelledby="jem-paper-heading">
+      <div class="section-heading">
+        <h2 id="jem-paper-heading">JEM — Paper</h2>
+      </div>
+
+      <div class="paper-archive">
+        <section class="paper-group paper-group--collaboration" aria-labelledby="paper-collaboration-heading">
+          <h3 id="paper-collaboration-heading">Collaboration</h3>
+          <div class="paper-collaboration-grid">
+            <figure class="work-card paper-collaboration-item" data-series="paper" data-function="collaboration" data-lightbox-title="Placenta Sculpture" data-start-index="0" data-images="web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-01.JPG,web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-02.JPG,web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-03.JPG">
+              <img src="web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-01.JPG" alt="Placenta Sculpture collaboration 01 by Yi Ma" loading="lazy">
+            </figure>
+            <figure class="work-card paper-collaboration-item" data-series="paper" data-function="collaboration" data-lightbox-title="Placenta Sculpture" data-start-index="1" data-images="web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-01.JPG,web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-02.JPG,web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-03.JPG">
+              <img src="web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-02.JPG" alt="Placenta Sculpture collaboration 02 by Yi Ma" loading="lazy">
+            </figure>
+            <figure class="work-card paper-collaboration-item" data-series="paper" data-function="collaboration" data-lightbox-title="Placenta Sculpture" data-start-index="2" data-images="web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-01.JPG,web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-02.JPG,web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-03.JPG">
+              <img src="web-images/jewelry/paper/paper-placenta-collaboration/paper-placenta-collaboration-03.JPG" alt="Placenta Sculpture collaboration 03 by Yi Ma" loading="lazy">
+            </figure>
+          </div>
+          <div class="paper-collaboration-caption">
+            <h3>Placenta Sculpture</h3>
+            <p class="work-meta">A paper-based wearable sculpture made with kozo paper. The work translates the organic form of the placenta into a fragile body-related object, using paper’s lightness, translucency, and fibrous structure to suggest protection, attachment, and biological connection.</p>
+            <p class="work-meta">Photo credit: Harry Williams.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
     <p>&copy; Yi Ma</p>
     <a href="mailto:yima0114@gmail.com">yima0114@gmail.com</a>
   </footer>
+  <div class="jewelry-lightbox" id="jewelry-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="jewelry-lightbox-title">
+    <button class="jewelry-lightbox__close" type="button" aria-label="Close gallery">&times;</button>
+    <div class="jewelry-lightbox__panel">
+      <div class="jewelry-lightbox__header">
+        <h2 id="jewelry-lightbox-title"></h2>
+        <p class="jewelry-lightbox__counter" id="jewelry-lightbox-counter"></p>
+      </div>
+      <div class="jewelry-lightbox__stage">
+        <button class="jewelry-lightbox__nav jewelry-lightbox__prev" type="button" aria-label="Previous image">&lsaquo;</button>
+        <img class="jewelry-lightbox__image" alt="">
+        <button class="jewelry-lightbox__nav jewelry-lightbox__next" type="button" aria-label="Next image">&rsaquo;</button>
+      </div>
+      <div class="jewelry-lightbox__caption" id="jewelry-lightbox-caption" hidden></div>
+      <div class="jewelry-lightbox__dots" aria-label="Gallery image selector" hidden></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const cards = document.querySelectorAll(
+        '[aria-labelledby="jem-nipple-heading"] .work-card[data-images], [aria-labelledby="jem-jewelry-heading"] .work-card[data-images], [aria-labelledby="jem-material-heading"] .work-card[data-images], [aria-labelledby="jem-paper-heading"] .work-card[data-images]'
+      );
+      const lightbox = document.getElementById('jewelry-lightbox');
+      const title = document.getElementById('jewelry-lightbox-title');
+      const counter = document.getElementById('jewelry-lightbox-counter');
+      const caption = document.getElementById('jewelry-lightbox-caption');
+      const image = lightbox.querySelector('.jewelry-lightbox__image');
+      const dots = lightbox.querySelector('.jewelry-lightbox__dots');
+      const closeButton = lightbox.querySelector('.jewelry-lightbox__close');
+      const previousButton = lightbox.querySelector('.jewelry-lightbox__prev');
+      const nextButton = lightbox.querySelector('.jewelry-lightbox__next');
+      let activeImages = [];
+      let activeItems = [];
+      let activeIndex = 0;
+      let activeTitle = '';
+      let activeCaption = null;
+      let previousFocus = null;
+
+      const render = () => {
+        const imagePath = activeImages[activeIndex];
+        const activeItem = activeItems[activeIndex] || null;
+        const displayTitle = activeItem?.title || activeTitle;
+        const displayCaption = activeItem?.caption || activeCaption;
+        image.src = imagePath;
+        image.alt = `${displayTitle}, image ${activeIndex + 1} of ${activeImages.length}`;
+        title.textContent = displayTitle;
+        counter.textContent = `${activeIndex + 1} / ${activeImages.length}`;
+        previousButton.disabled = activeImages.length < 2;
+        nextButton.disabled = activeImages.length < 2;
+        caption.replaceChildren();
+        caption.hidden = !displayCaption;
+        if (displayCaption) caption.append(displayCaption.cloneNode(true));
+        dots.replaceChildren();
+        dots.hidden = activeImages.length < 2 || activeItems.length > 0;
+        if (dots.hidden) return;
+
+        activeImages.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.className = 'jewelry-lightbox__dot';
+          dot.type = 'button';
+          dot.setAttribute('aria-label', `Show image ${index + 1} of ${activeImages.length}`);
+          dot.setAttribute('aria-current', index === activeIndex ? 'true' : 'false');
+          dot.addEventListener('click', () => {
+            activeIndex = index;
+            render();
+          });
+          dots.append(dot);
+        });
+      };
+
+      const openLightbox = (card) => {
+        activeItems = [];
+        activeImages = card.dataset.images.split(',').map((path) => path.trim()).filter(Boolean);
+        activeIndex = Number(card.dataset.startIndex || 0);
+        activeTitle = card.dataset.lightboxTitle || card.querySelector('h3')?.textContent.trim() || 'Jewelry work';
+        activeCaption = null;
+        if (!activeImages.length) return;
+        if (activeIndex < 0 || activeIndex >= activeImages.length) activeIndex = 0;
+        previousFocus = document.activeElement;
+        render();
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+        closeButton.focus();
+      };
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-open');
+        image.src = '';
+        activeItems = [];
+        activeCaption = null;
+        caption.replaceChildren();
+        caption.hidden = true;
+        if (previousFocus) previousFocus.focus();
+        previousFocus = null;
+      };
+
+      const moveImage = (direction) => {
+        if (activeImages.length < 2) return;
+        activeIndex = (activeIndex + direction + activeImages.length) % activeImages.length;
+        render();
+      };
+
+      cards.forEach((card) => {
+        const cardTitle = card.dataset.lightboxTitle || card.querySelector('h3')?.textContent.trim() || 'jewelry work';
+        if (card.tagName !== 'BUTTON') {
+          card.tabIndex = 0;
+          card.setAttribute('role', 'button');
+        }
+        if (!card.hasAttribute('aria-label')) card.setAttribute('aria-label', `Open ${cardTitle} gallery`);
+        card.addEventListener('click', () => openLightbox(card));
+        if (card.tagName !== 'BUTTON') {
+          card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              openLightbox(card);
+            }
+          });
+        }
+      });
+
+      const oilSourceCards = [...document.querySelectorAll('[aria-labelledby="oil-painting-heading"] .oil-painting-card[data-images]')];
+      const pipeLadyIntro = document.querySelector('.pipe-lady-intro');
+      const oilView = document.getElementById('oil-painting-gallery-view');
+      const oilGallery = oilView?.querySelector('[data-oil-gallery]');
+      const oilDetail = oilView?.querySelector('[data-oil-detail]');
+      const oilDetailImage = oilView?.querySelector('[data-oil-detail-image]');
+      const oilDetailCaption = oilView?.querySelector('[data-oil-detail-caption]');
+      const oilBack = oilView?.querySelector('[data-oil-back]');
+      const oilLast = oilView?.querySelector('[data-oil-last]');
+      const oilLastTitle = oilView?.querySelector('[data-oil-last-title]');
+      const oilNext = oilView?.querySelector('[data-oil-next]');
+      const oilNextTitle = oilView?.querySelector('[data-oil-next-title]');
+      const seriesBack = oilView?.querySelector('[data-series-back]');
+      let activeOilIndex = 0;
+
+      const oilItems = oilSourceCards.map((card) => {
+        const sourceImage = card.querySelector('img');
+        const captionSource = card.querySelector('figcaption');
+        const src = card.dataset.images.split(',').map((path) => path.trim()).filter(Boolean)[0];
+        return {
+          src,
+          alt: sourceImage?.alt || '',
+          title: captionSource?.querySelector('h3')?.textContent.trim() || 'Oil painting',
+          meta: captionSource?.querySelector('.work-meta')?.textContent.trim() || '',
+          caption: captionSource?.cloneNode(true) || null
+        };
+      }).filter((item) => item.src);
+
+      const scrollToOilView = () => {
+        if (!oilView) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        oilView.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' });
+      };
+
+      const renderOilGallery = () => {
+        if (!oilGallery || oilGallery.children.length) return;
+        oilItems.forEach((item, index) => {
+          const button = document.createElement('button');
+          button.className = 'pipe-lady-oil-gallery-card';
+          button.type = 'button';
+          button.setAttribute('aria-label', `View ${item.title}`);
+
+          const imageElement = document.createElement('img');
+          imageElement.src = item.src;
+          imageElement.alt = item.alt;
+          imageElement.loading = 'lazy';
+
+          const titleElement = document.createElement('span');
+          titleElement.className = 'pipe-lady-oil-gallery-card__title';
+          titleElement.textContent = item.title;
+
+          const metaElement = document.createElement('span');
+          metaElement.className = 'pipe-lady-oil-gallery-card__meta';
+          metaElement.textContent = item.meta;
+
+          button.append(imageElement, titleElement);
+          if (item.meta) button.append(metaElement);
+          button.addEventListener('click', () => showOilDetail(index));
+          oilGallery.append(button);
+        });
+      };
+
+      const showOilGallery = () => {
+        if (!oilView || !oilGallery || !oilDetail || !oilItems.length) return;
+        renderOilGallery();
+        if (pipeLadyIntro) pipeLadyIntro.hidden = true;
+        oilView.hidden = false;
+        oilView.classList.remove('is-detail-active');
+        oilGallery.hidden = false;
+        oilDetail.hidden = true;
+      };
+
+      const showOilDetail = (index) => {
+        if (!oilView || !oilGallery || !oilDetail || !oilDetailImage || !oilDetailCaption || !oilLast || !oilLastTitle || !oilNext || !oilNextTitle || !oilItems.length) return;
+        activeOilIndex = (index + oilItems.length) % oilItems.length;
+        const item = oilItems[activeOilIndex];
+        const lastItem = oilItems[(activeOilIndex - 1 + oilItems.length) % oilItems.length];
+        const nextItem = oilItems[(activeOilIndex + 1) % oilItems.length];
+        if (pipeLadyIntro) pipeLadyIntro.hidden = true;
+        oilView.hidden = false;
+        oilView.classList.add('is-detail-active');
+        oilGallery.hidden = true;
+        oilDetail.hidden = false;
+        oilDetailImage.src = item.src;
+        oilDetailImage.alt = item.alt;
+        oilDetailCaption.replaceChildren();
+        if (item.caption) {
+          const captionClone = item.caption.cloneNode(true);
+          oilDetailCaption.replaceChildren(...captionClone.childNodes);
+        }
+        oilLast.hidden = oilItems.length < 2;
+        oilNext.hidden = oilItems.length < 2;
+        oilLastTitle.textContent = lastItem.title;
+        oilNextTitle.textContent = nextItem.title;
+        scrollToOilView();
+      };
+
+      const showPipeLadyEntrance = () => {
+        if (!oilView || !oilGallery || !oilDetail) return;
+        oilView.hidden = true;
+        oilView.classList.remove('is-detail-active');
+        oilGallery.hidden = false;
+        oilDetail.hidden = true;
+        if (pipeLadyIntro) {
+          pipeLadyIntro.hidden = false;
+          pipeLadyIntro.scrollIntoView({ block: 'start', behavior: 'auto' });
+        }
+      };
+
+      oilBack?.addEventListener('click', showOilGallery);
+      oilLast?.addEventListener('click', () => showOilDetail(activeOilIndex - 1));
+      oilNext?.addEventListener('click', () => showOilDetail(activeOilIndex + 1));
+      seriesBack?.addEventListener('click', showPipeLadyEntrance);
+
+      const oilTrigger = document.querySelector('[data-oil-gallery-trigger]');
+      oilTrigger?.addEventListener('click', (event) => {
+        event.preventDefault();
+        showOilGallery();
+      });
+
+      const oilCards = document.querySelectorAll('[aria-labelledby="oil-painting-heading"] .oil-painting-card');
+      let hoverCenterTimer = 0;
+      let hoverCenterFrame = 0;
+
+      const easeInOutCubic = (progress) => (
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2
+      );
+
+      const centerCardSoftly = (card) => {
+        window.cancelAnimationFrame(hoverCenterFrame);
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const rect = card.getBoundingClientRect();
+        const start = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const target = start + rect.top - ((window.innerHeight - rect.height) / 2);
+        const end = Math.max(0, Math.min(maxScroll, target));
+        if (reduceMotion || Math.abs(end - start) < 6) {
+          window.scrollTo(0, end);
+          return;
+        }
+
+        const duration = 950;
+        let startedAt = null;
+        const step = (time) => {
+          if (!startedAt) startedAt = time;
+          const progress = Math.min((time - startedAt) / duration, 1);
+          const eased = easeInOutCubic(progress);
+          window.scrollTo(0, start + ((end - start) * eased));
+          if (progress < 1) hoverCenterFrame = window.requestAnimationFrame(step);
+        };
+        hoverCenterFrame = window.requestAnimationFrame(step);
+      };
+
+      oilCards.forEach((card) => {
+        const queueCentering = () => {
+          window.clearTimeout(hoverCenterTimer);
+          hoverCenterTimer = window.setTimeout(() => centerCardSoftly(card), 240);
+        };
+        const cancelCentering = () => window.clearTimeout(hoverCenterTimer);
+        card.addEventListener('pointerenter', queueCentering);
+        card.addEventListener('focusin', queueCentering);
+        card.addEventListener('pointerleave', cancelCentering);
+        card.addEventListener('focusout', cancelCentering);
+      });
+
+      closeButton.addEventListener('click', closeLightbox);
+      previousButton.addEventListener('click', () => moveImage(-1));
+      nextButton.addEventListener('click', () => moveImage(1));
+      lightbox.addEventListener('click', (event) => {
+        const clickedButton = event.target.closest('button');
+        const clickedImageArea = event.target.closest('.jewelry-lightbox__stage');
+        const clickedDotsArea = event.target.closest('.jewelry-lightbox__dots');
+        if (!clickedButton && !clickedImageArea && !clickedDotsArea) closeLightbox();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (event.key === 'Escape') closeLightbox();
+        if (event.key === 'ArrowLeft') moveImage(-1);
+        if (event.key === 'ArrowRight') moveImage(1);
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const sourceCards = [...document.querySelectorAll('[aria-labelledby="printmaking-heading"] .printmaking-card[data-images]')];
+      const pipeLadyIntro = document.querySelector('.pipe-lady-intro');
+      const view = document.getElementById('printmaking-gallery-view');
+      const gallery = view?.querySelector('[data-printmaking-gallery]');
+      const detail = view?.querySelector('[data-printmaking-detail]');
+      const detailImage = view?.querySelector('[data-printmaking-detail-image]');
+      const detailCaption = view?.querySelector('[data-printmaking-detail-caption]');
+      const backToSeries = view?.querySelector('[data-printmaking-series-back]');
+      const backToGallery = view?.querySelector('[data-printmaking-back]');
+      const trigger = document.querySelector('[data-printmaking-gallery-trigger]');
+
+      const items = sourceCards.map((card) => {
+        const sourceImage = card.querySelector('img');
+        const captionSource = card.querySelector('figcaption');
+        const src = card.dataset.images.split(',').map((path) => path.trim()).filter(Boolean)[0];
+        return {
+          src,
+          alt: sourceImage?.alt || '',
+          title: captionSource?.querySelector('h3')?.textContent.trim() || 'Printmaking work',
+          meta: captionSource?.querySelector('.work-meta')?.textContent.trim() || '',
+          caption: captionSource?.cloneNode(true) || null
+        };
+      }).filter((item) => item.src);
+
+      const renderGallery = () => {
+        if (!gallery || gallery.children.length) return;
+        items.forEach((item, index) => {
+          const button = document.createElement('button');
+          button.className = 'pipe-lady-printmaking-card';
+          button.type = 'button';
+          button.setAttribute('aria-label', `View ${item.title}`);
+
+          const number = document.createElement('span');
+          number.className = 'pipe-lady-printmaking-card__number';
+          number.textContent = String(index + 1).padStart(2, '0');
+
+          const imageElement = document.createElement('img');
+          imageElement.src = item.src;
+          imageElement.alt = item.alt;
+          imageElement.loading = 'lazy';
+
+          const titleElement = document.createElement('span');
+          titleElement.className = 'pipe-lady-printmaking-card__title';
+          titleElement.textContent = item.title;
+
+          const metaElement = document.createElement('span');
+          metaElement.className = 'pipe-lady-printmaking-card__meta';
+          metaElement.textContent = item.meta;
+
+          button.append(number, imageElement, titleElement);
+          if (item.meta) button.append(metaElement);
+          button.addEventListener('click', () => showDetail(index));
+          gallery.append(button);
+        });
+      };
+
+      const showGallery = () => {
+        if (!view || !gallery || !detail || !items.length) return;
+        renderGallery();
+        if (pipeLadyIntro) pipeLadyIntro.hidden = true;
+        view.hidden = false;
+        view.classList.remove('is-detail-active');
+        gallery.hidden = false;
+        detail.hidden = true;
+      };
+
+      const showDetail = (index) => {
+        if (!view || !gallery || !detail || !detailImage || !detailCaption || !items.length) return;
+        const item = items[index];
+        if (pipeLadyIntro) pipeLadyIntro.hidden = true;
+        view.hidden = false;
+        view.classList.add('is-detail-active');
+        gallery.hidden = true;
+        detail.hidden = false;
+        detailImage.src = item.src;
+        detailImage.alt = item.alt;
+        detailCaption.replaceChildren();
+        if (item.caption) {
+          const captionClone = item.caption.cloneNode(true);
+          detailCaption.replaceChildren(...captionClone.childNodes);
+        }
+      };
+
+      const showSeries = () => {
+        if (!view || !gallery || !detail) return;
+        view.hidden = true;
+        view.classList.remove('is-detail-active');
+        gallery.hidden = false;
+        detail.hidden = true;
+        if (pipeLadyIntro) {
+          pipeLadyIntro.hidden = false;
+          pipeLadyIntro.scrollIntoView({ block: 'start', behavior: 'auto' });
+        }
+      };
+
+      backToSeries?.addEventListener('click', showSeries);
+      backToGallery?.addEventListener('click', showGallery);
+      trigger?.addEventListener('click', (event) => {
+        event.preventDefault();
+        showGallery();
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const sourceSection = document.querySelector('[aria-labelledby="jem-pipe-heading"]');
+      const allSourceCards = sourceSection
+        ? [...sourceSection.querySelectorAll('.pipe-standalone-work[data-images], .work-card[data-series="pipe-wearable-translation"][data-images]')]
+        : [];
+      const sourceCards = ['Pipe Shoulder Piece', 'Untitled (Pipe Form)']
+        .map((title) => allSourceCards.find((card) => card.querySelector('h3')?.textContent.trim() === title))
+        .filter(Boolean);
+      const pipeLadyIntro = document.querySelector('.pipe-lady-intro');
+      const view = document.getElementById('pipe-wearable-gallery-view');
+      const gallery = view?.querySelector('[data-pipe-gallery]');
+      const detail = view?.querySelector('[data-pipe-detail]');
+      const detailImage = view?.querySelector('[data-pipe-detail-image]');
+      const detailCaption = view?.querySelector('[data-pipe-detail-caption]');
+      const detailThumbs = view?.querySelector('[data-pipe-detail-thumbs]');
+      const backToSeries = view?.querySelector('[data-pipe-series-back]');
+      const backToGallery = view?.querySelector('[data-pipe-back]');
+      const trigger = document.querySelector('[data-pipe-gallery-trigger]');
+      let activeImageIndex = 0;
+
+      const items = sourceCards.map((card) => {
+        const sourceImage = card.querySelector('img');
+        const captionSource = card.querySelector('figcaption');
+        const images = card.dataset.images.split(',').map((path) => path.trim()).filter(Boolean);
+        return {
+          images,
+          alt: sourceImage?.alt || '',
+          title: captionSource?.querySelector('h3')?.textContent.trim() || 'Pipe wearable piece',
+          meta: captionSource?.querySelector('.work-meta')?.textContent.trim() || '',
+          caption: captionSource?.cloneNode(true) || null
+        };
+      }).filter((item) => item.images.length);
+
+      const renderDetailThumbs = (item) => {
+        if (!detailThumbs) return;
+        detailThumbs.replaceChildren();
+        if (item.images.length < 2) {
+          detailThumbs.hidden = true;
+          return;
+        }
+
+        item.images.forEach((src, imageIndex) => {
+          const button = document.createElement('button');
+          button.className = 'pipe-lady-pipe-detail__thumb';
+          button.type = 'button';
+          button.setAttribute('aria-label', `Show ${item.title} view ${imageIndex + 1}`);
+          button.setAttribute('aria-pressed', String(imageIndex === activeImageIndex));
+
+          const imageElement = document.createElement('img');
+          imageElement.src = src;
+          imageElement.alt = '';
+          imageElement.loading = 'lazy';
+
+          button.append(imageElement);
+          button.addEventListener('click', () => updateDetailImage(item, imageIndex));
+          detailThumbs.append(button);
+        });
+        detailThumbs.hidden = false;
+      };
+
+      const updateDetailImage = (item, imageIndex) => {
+        if (!detailImage) return;
+        activeImageIndex = (imageIndex + item.images.length) % item.images.length;
+        detailImage.src = item.images[activeImageIndex];
+        detailImage.alt = activeImageIndex === 0 ? item.alt : `${item.title} view ${activeImageIndex + 1}`;
+        renderDetailThumbs(item);
+      };
+
+      const renderGallery = () => {
+        if (!gallery || gallery.children.length) return;
+        items.forEach((item, index) => {
+          const button = document.createElement('button');
+          button.className = 'pipe-lady-pipe-card';
+          button.type = 'button';
+          button.setAttribute('aria-label', `View ${item.title}`);
+
+          const number = document.createElement('span');
+          number.className = 'pipe-lady-pipe-card__number';
+          number.textContent = String(index + 1).padStart(2, '0');
+
+          const imageElement = document.createElement('img');
+          imageElement.src = item.images[0];
+          imageElement.alt = item.alt;
+          imageElement.loading = 'lazy';
+
+          const titleElement = document.createElement('span');
+          titleElement.className = 'pipe-lady-pipe-card__title';
+          titleElement.textContent = item.title;
+
+          const metaElement = document.createElement('span');
+          metaElement.className = 'pipe-lady-pipe-card__meta';
+          metaElement.textContent = item.meta;
+
+          button.append(number, imageElement, titleElement);
+          if (item.meta) button.append(metaElement);
+          button.addEventListener('click', () => showDetail(index));
+          gallery.append(button);
+        });
+      };
+
+      const showGallery = () => {
+        if (!view || !gallery || !detail || !items.length) return;
+        renderGallery();
+        if (pipeLadyIntro) pipeLadyIntro.hidden = true;
+        view.hidden = false;
+        view.classList.remove('is-detail-active');
+        gallery.hidden = false;
+        detail.hidden = true;
+      };
+
+      const showDetail = (index) => {
+        if (!view || !gallery || !detail || !detailImage || !detailCaption || !items.length) return;
+        const item = items[index];
+        activeImageIndex = 0;
+        if (pipeLadyIntro) pipeLadyIntro.hidden = true;
+        view.hidden = false;
+        view.classList.add('is-detail-active');
+        gallery.hidden = true;
+        detail.hidden = false;
+        updateDetailImage(item, 0);
+        detailCaption.replaceChildren();
+        if (item.caption) {
+          const captionClone = item.caption.cloneNode(true);
+          detailCaption.replaceChildren(...captionClone.childNodes);
+        }
+      };
+
+      const showSeries = () => {
+        if (!view || !gallery || !detail) return;
+        view.hidden = true;
+        view.classList.remove('is-detail-active');
+        gallery.hidden = false;
+        detail.hidden = true;
+        if (pipeLadyIntro) {
+          pipeLadyIntro.hidden = false;
+          pipeLadyIntro.scrollIntoView({ block: 'start', behavior: 'auto' });
+        }
+      };
+
+      backToSeries?.addEventListener('click', showSeries);
+      backToGallery?.addEventListener('click', showGallery);
+      trigger?.addEventListener('click', (event) => {
+        event.preventDefault();
+        showGallery();
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const section = document.querySelector('[aria-labelledby="jem-jewelry-heading"]');
+      if (!section) return;
+      const buttons = section.querySelectorAll('[data-jewelry-filter]');
+      const cards = section.querySelectorAll('.work-card[data-function]');
+      const groups = section.querySelectorAll('[data-jewelry-group]');
+
+      const applyFilter = (filter) => {
+        cards.forEach((card) => {
+          card.hidden = filter !== 'all' && card.dataset.function !== filter;
+        });
+
+        groups.forEach((group) => {
+          const visibleCards = group.querySelectorAll('.work-card[data-function]:not([hidden])');
+          group.hidden = filter !== 'all' && visibleCards.length === 0;
+        });
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.jewelryFilter;
+          buttons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle('is-active', active);
+            item.setAttribute('aria-pressed', String(active));
+          });
+          applyFilter(filter);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
