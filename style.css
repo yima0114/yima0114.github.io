@@ -5828,3 +5828,12 @@ body.cv-page .cv-portrait::after {
     transform: none !important;
   }
 }
+
+@media (max-width: 640px) {
+  body.cv-page .site-nav a {
+    display: inline-block !important;
+    padding: 0.82rem 0.5rem !important;
+    margin: -0.82rem -0.5rem !important;
+    touch-action: manipulation !important;
+  }
+}
