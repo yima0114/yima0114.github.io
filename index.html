@@ -75,6 +75,11 @@
       const number = home.querySelector("[data-home-preview-number]");
       const items = home.querySelectorAll("[data-preview-title]");
       const defaultTitle = home.dataset.defaultTitle || "Hello, I am Yi Ma!";
+      const canUsePreviewEvents = typeof window.matchMedia === "function" && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      if (!canUsePreviewEvents) {
+        return;
+      }
 
       const setPreview = (item) => {
         if (!item) {
