@@ -1466,7 +1466,9 @@ body.jewelry-page .practice-overview--jem .practice-overview__archive-link:focus
 .pipe-lady-series-back,
 .pipe-lady-oil-back,
 .pipe-lady-oil-neighbor,
-.pipe-lady-oil-next {
+.pipe-lady-oil-next,
+.pipe-lady-printmaking-next,
+.pipe-lady-pipe-next {
   justify-self: start;
   padding: 0;
   border: 0;
@@ -1484,37 +1486,57 @@ body.jewelry-page .practice-overview--jem .practice-overview__archive-link:focus
 .pipe-lady-series-back:hover,
 .pipe-lady-oil-back:hover,
 .pipe-lady-oil-neighbor:hover,
-.pipe-lady-oil-next:hover {
+.pipe-lady-oil-next:hover,
+.pipe-lady-printmaking-next:hover,
+.pipe-lady-pipe-next:hover {
   color: rgba(242, 240, 234, 0.86);
 }
 
-.pipe-lady-oil-work-nav {
+.pipe-lady-oil-work-nav,
+.pipe-lady-printmaking-work-nav,
+.pipe-lady-pipe-work-nav {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1.5rem;
   width: min(100%, 24rem);
   padding-top: 1rem;
   border-top: 1px solid rgba(242, 240, 234, 0.18);
 }
 
-.pipe-lady-oil-neighbor {
+.pipe-lady-oil-work-nav {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.pipe-lady-printmaking-work-nav,
+.pipe-lady-pipe-work-nav {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.pipe-lady-oil-neighbor,
+.pipe-lady-printmaking-next,
+.pipe-lady-pipe-next {
   display: grid;
   gap: 0.2rem;
 }
 
-.pipe-lady-oil-next {
+.pipe-lady-oil-next,
+.pipe-lady-printmaking-next,
+.pipe-lady-pipe-next {
   justify-self: end;
   text-align: right;
 }
 
-.pipe-lady-oil-neighbor span {
+.pipe-lady-oil-neighbor span,
+.pipe-lady-printmaking-next span,
+.pipe-lady-pipe-next span {
   color: var(--muted);
   font-size: 0.72rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.pipe-lady-oil-neighbor strong {
+.pipe-lady-oil-neighbor strong,
+.pipe-lady-printmaking-next strong,
+.pipe-lady-pipe-next strong {
   font-weight: 500;
 }
 
@@ -1535,6 +1557,12 @@ body.jewelry-page .practice-overview--jem .practice-overview__archive-link:focus
 
 .pipe-lady-printmaking-view.is-detail-active .pipe-lady-printmaking-view__heading {
   display: none;
+}
+
+@media (min-width: 901px) {
+  .pipe-lady-printmaking-view.is-detail-active {
+    min-height: calc(100vh - clamp(120px, 17vh, 180px));
+  }
 }
 
 .pipe-lady-printmaking-gallery {
@@ -1577,7 +1605,8 @@ body.jewelry-page .practice-overview--jem .practice-overview__archive-link:focus
 
 .pipe-lady-printmaking-card:focus-visible,
 .pipe-lady-printmaking-series-back:focus-visible,
-.pipe-lady-printmaking-back:focus-visible {
+.pipe-lady-printmaking-back:focus-visible,
+.pipe-lady-printmaking-next:focus-visible {
   outline: 1px solid rgba(242, 240, 234, 0.64);
   outline-offset: 0.45rem;
 }
@@ -1726,6 +1755,7 @@ body.jewelry-page .practice-overview--jem .practice-overview__archive-link:focus
 .pipe-lady-pipe-card:focus-visible,
 .pipe-lady-pipe-series-back:focus-visible,
 .pipe-lady-pipe-back:focus-visible,
+.pipe-lady-pipe-next:focus-visible,
 .pipe-lady-pipe-detail__thumb:focus-visible {
   outline: 1px solid rgba(242, 240, 234, 0.64);
   outline-offset: 0.45rem;
